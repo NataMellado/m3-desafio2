@@ -1,7 +1,7 @@
 :root {
     /* colors */
-    --clr-primary: #F7F7F7;
-    --clr-secondary: #c36a44;
+    --clr-primary: #f7f7f7;
+    --clr-secondary: #db561d;
     --clr-nt: white;
     /* fonts */
     --ff-primary: 'Roboto', sans-serif;
@@ -9,10 +9,6 @@
     --fw-300: 300;
     --fw-400: 400;
     --fw-500: 500;
-    /* font size */
-    --fs-h1: 2.5rem;
-    --fs-h2: 1.5rem;
-    --fs-p: 0.75rem;
 }
 
 /* Reset CSS */
@@ -82,13 +78,98 @@ body {
 
 /* Desafío */
 .desafio-card {
-    justify-self: center;
-    max-width: 1000px;
+    justify-self: center;;
+    max-width: 800px;
     margin-top: 4rem;
     padding: 0 1rem;
     
 }
 
+.desafio-inicio {
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.desafio-inicio ol {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    list-style-position: inside;
+    padding-left: 1rem;
+}
+
+.desafio-cachipun {
+    height: clamp(150px, 20vw, 300px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    background-color: var(--clr-secondary);
+    border-radius: 2rem;
+}
+
+/* Typography */
+h1 {
+    font-size: clamp(0.5rem, 8vw, 2rem); 
+    font-weight: var(--fw-500);
+    
+}
+
+h2 {
+    font-size: clamp(0.5rem, 4vw, 1.5rem);
+    font-weight: var(--fw-400);
+}
+
+li {
+    font-size: clamp(0.5rem, 4vw, 1rem);
+    
+}
+
+li::marker {
+    color: var(--clr-secondary);
+    font-weight: var(--fw-500);
+}
+
+.desafio-card p {
+    font-size: clamp(0.5rem, 5vw, 1.5rem);
+    font-weight: var(--fw-500);
+    color: var(--clr-secondary);
+}
+
+.desafio-cachipun {
+    font-size: clamp(0.5rem, 4vw, 1.5rem);
+    color: var(--clr-nt);
+}
+
+.desafio-cachipun #result p{
+    color: var(--clr-nt);
+}
+
+.desafio-cachipun button {
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--clr-nt);
+    color: var(--clr-secondary);
+    padding: 0.3rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.desafio-cachipun button:hover {
+    background-color: var(--clr-secondary);
+    color: var(--clr-nt);
+    border-style: solid;
+}
+
+#result p{
+    font-size: clamp(0.5rem, 4vw, 1.2rem);
+}
 
 
 
@@ -100,6 +181,7 @@ footer {
     border-radius: 0 0 var(--br) var(--br);
     background-color: var(--clr-primary);
     min-height: 4rem;
+    font-size: clamp(0.5rem, 4vw, 1rem);
 }
 
 footer a {
@@ -111,6 +193,3 @@ footer p {
     margin: 0;
     padding: 0;
 }
-
-
-
