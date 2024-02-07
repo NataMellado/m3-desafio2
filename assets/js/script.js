@@ -3,11 +3,11 @@
 function cachipun() {
 
   // Restablecer puntajes a cero
-  var userWins = 0;
-  var machineWins = 0;
+  let userWins = 0;
+  let machineWins = 0;
 
   // Obtener el número de rondas desde el elemento con id 'rounds' y guardarlo en la variable numRounds.
-  var numRounds = parseInt(document.getElementById("rounds").value, 10);
+  let numRounds = parseInt(document.getElementById("rounds").value, 10);
 
   // Validar si el número de rondas es válido.
   if (isNaN(numRounds) || numRounds <= 0 || numRounds > 10) {
@@ -16,9 +16,9 @@ function cachipun() {
   }
 
   // Ciclo para ejecutar el juego según el número de rondas.
-  for (var i = 0; i < numRounds; i++) {
+  for (let i = 0; i < numRounds; i++) {
     // Solicitar la jugada del usuario y convertirla a minúsculas para hacer la comparación más fácil.
-    var userChoice = prompt(
+    let userChoice = prompt(
       "Ingrese su jugada: Piedra, Papel o Tijera"
     ).toLowerCase();
 
@@ -34,10 +34,10 @@ function cachipun() {
     }
 
     // Obtener la jugada automática de la máquina.
-    var machineChoice = getMachineChoice();
+    let machineChoice = getMachineChoice();
 
     // Determinar al ganador de la ronda.
-    var winner = getWinner(userChoice, machineChoice);
+    let winner = getWinner(userChoice, machineChoice);
 
     // Actualizar puntajes
     if (winner === "Usuario") {
@@ -65,7 +65,7 @@ document.getElementById("result").style.display = "block";
 // Función para obtener la jugada automática de la máquina.
 function getMachineChoice() {
   // Generar un número aleatorio entre 0 y 2.
-  var randomNum = Math.floor(Math.random() * 3);
+  let randomNum = Math.floor(Math.random() * 3);
 
   // Asignar una jugada a la máquina según el número aleatorio.
   switch (randomNum) {
@@ -97,9 +97,9 @@ function getWinner(userChoice, machineChoice) {
 // Función para actualizar los puntajes en el HTML
 function updateScores(userWins, machineWins) {
   // Obtener elementos del DOM para actualizar sus contenidos
-  var userScoreElement = document.getElementById("user-score");
-  var machineScoreElement = document.getElementById("machine-score");
-  var winnerElement = document.getElementById("winner");
+  let userScoreElement = document.getElementById("user-score");
+  let machineScoreElement = document.getElementById("machine-score");
+  let winnerElement = document.getElementById("winner");
 
   // Actualizar contenidos
   userScoreElement.innerText = `Usuario: ${userWins}`;
